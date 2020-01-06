@@ -1,0 +1,14 @@
+extends layout
+block content
+    h1 All products
+    dl
+        each product in products
+            dd #{product.name}  $#{product.price}
+                dt 
+                    a(href=`/products/${product.id}/update`) Update
+                dt
+                    a(href=`/products/${product.id}/delete`) Delete
+        else
+            p There are no products
+    
+    a(href='/products/create') Create a new product

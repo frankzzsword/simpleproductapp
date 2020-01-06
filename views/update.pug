@@ -1,0 +1,10 @@
+extends layout
+block content
+    h1 Update a Product
+    form(action=`/products/${product.id}/update` method="POST")
+        ul
+            li Product Name:
+            input(type="text", name="name", value=(product.name))
+            li Price:
+            input(type="text", name="price", value=(product.price))
+            input(type="submit", value="submit")
